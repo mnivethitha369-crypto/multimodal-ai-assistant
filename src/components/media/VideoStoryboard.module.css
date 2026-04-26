@@ -1,0 +1,56 @@
+.board {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-top: 12px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+.title { font-family: var(--mono); color: var(--accent); }
+
+.styleBadge {
+  font-size: 10px;
+  background: var(--warning);
+  color: var(--bg);
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.scenes { display: flex; flex-direction: column; gap: 12px; }
+
+.sceneCard {
+  background: var(--bg2);
+  border-left: 3px solid var(--accent);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.sceneNum { font-size: 10px; color: var(--accent); margin-bottom: 4px; }
+
+.desc { font-size: 13px; line-height: 1.4; }
+
+.meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.promptBox {
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px dotted var(--border);
+  font-size: 11px;
+  color: var(--text-dim);
+}
