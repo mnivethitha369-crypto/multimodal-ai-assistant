@@ -1,0 +1,232 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/ui/Sidebar.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.Sidebar_sidebar__OaBIz {
+  width: 260px;
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+}
+
+.Sidebar_logo__TBbp1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.Sidebar_logoText__dXmzA { font-family: var(--mono); font-size: 18px; font-weight: bold; }
+.Sidebar_accent__ba_Gc { color: var(--accent); }
+.Sidebar_nav__6nc2e { flex: 1 1; display: flex; flex-direction: column; gap: 8px; }
+.Sidebar_navItem__N674H { padding: 12px; cursor: pointer; color: var(--text-dim); border-radius: 4px; }
+.Sidebar_navItem__N674H:hover { background: var(--bg3); color: var(--text); }
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/ui/ModeSelector.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.ModeSelector_bar__2xVBI {
+  display: flex;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  /* Hide scrollbar for cleaner look */
+  scrollbar-width: none; 
+}
+
+.ModeSelector_bar__2xVBI::-webkit-scrollbar {
+  display: none;
+}
+
+.ModeSelector_btn__Td03_ {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-dim);
+  font-family: var(--font);
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.ModeSelector_btn__Td03_:hover {
+  border-color: var(--accent-color);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.ModeSelector_btn__Td03_.ModeSelector_active__l9_Yq {
+  background: rgba(0, 212, 255, 0.05); /* Slight tint */
+  border-color: var(--accent-color);
+  color: var(--text);
+  box-shadow: 0 0 15px var(--accent-color);
+  font-weight: bold;
+}
+
+.ModeSelector_btn__Td03_ span:first-child {
+  font-size: 16px;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/voice/JARVISOrb.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.JARVISOrb_container__MBZlQ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  position: relative;
+}
+
+.JARVISOrb_orb__Lz14v {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 30px var(--accent);
+}
+
+.JARVISOrb_orb__Lz14v.JARVISOrb_active__OZhnv {
+  animation: JARVISOrb_pulse__nuqPr 2s infinite ease-in-out;
+}
+
+.JARVISOrb_orb__Lz14v.JARVISOrb_speaking__gRJqn {
+  animation: JARVISOrb_speak__AhIA8 0.5s infinite ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 0 0 50px var(--accent);
+}
+
+.JARVISOrb_ring__af1J1 {
+  position: absolute;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: JARVISOrb_rotate__f4H3o 10s linear infinite;
+}
+
+.JARVISOrb_ring1__LUzu9 { width: 140px; height: 140px; border-style: dashed; }
+.JARVISOrb_ring2__qog5M { width: 180px; height: 180px; border-width: 1px; animation-direction: reverse; }
+
+@keyframes JARVISOrb_pulse__nuqPr {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes JARVISOrb_speak__AhIA8 {
+  0%, 100% { transform: scale(1.1); }
+  50% { transform: scale(1.25); }
+}
+
+@keyframes JARVISOrb_rotate__f4H3o {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/chat/ChatWindow.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.ChatWindow_window__wK5jB {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.ChatWindow_empty__DsfQk {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.ChatWindow_title__PY_GI {
+  font-family: var(--mono);
+  color: var(--accent);
+  letter-spacing: 4px;
+}
+
+.ChatWindow_suggestions__a5NtI {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.ChatWindow_suggestion__FF2mz {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.ChatWindow_suggestion__FF2mz:hover {
+  border-color: var(--accent);
+  transform: translateX(5px);
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/chat/InputBar.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+.InputBar_bar__gnh1g {
+  padding: 20px;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+}
+
+.InputBar_inner__tcbzl {
+  display: flex;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.InputBar_inner__tcbzl:focus-within {
+  border-color: var(--accent);
+  box-shadow: var(--glow);
+}
+
+.InputBar_textarea__tdnVw {
+  flex: 1 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: var(--font);
+  resize: none;
+  height: 24px;
+  max-height: 160px;
+}
+
+.InputBar_sendBtn__NK8GL {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.InputBar_sendBtn__NK8GL:disabled {
+  background: var(--text-dim);
+  cursor: not-allowed;
+}
