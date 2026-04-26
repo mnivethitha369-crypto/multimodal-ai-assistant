@@ -1,4 +1,4 @@
-import { buildImagePrompt } from '../prompts/imagePromptBuilder';
+import { buildImagePrompt } from '../prompts/imagepromptBuilder';
 
 export function getImageModePayload(input: string) {
   return {

@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import ThinkingSteps, { AgentStep } from './ThinkingSteps';
+import ThinkingSteps, { AgentStep } from './Thinkingsteps';
 import styles from './PlanViewer.module.css';
 
 interface Plan {

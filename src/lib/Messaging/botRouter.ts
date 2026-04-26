@@ -1,5 +1,5 @@
 import { detectMode } from '../modeDetector';
-import { getSystemPrompt } from '../prompts/imagePromptBuilder'; // Or relevant prompt lib
+import { getSystemPrompt } from '../prompts/imagepromptBuilder'; // Or relevant prompt lib
 
 export function routeMessage(text: string) {
   const mode = detectMode(text);

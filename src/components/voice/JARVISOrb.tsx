@@ -4,13 +4,12 @@ import styles from './JARVISOrb.module.css';
 
 interface Props { active?: boolean; speaking?: boolean; }
 
-export default function JARVISOrb({ active = true, speaking = false }: Props) {
+export default function JARVISOrb({ active, speaking }: Props) {
   return (
-    <div className={`${styles.container} ${active ? styles.active : ''} ${speaking ? styles.speaking : ''}`}>
-      <div className={styles.ring}></div>
-      <div className={styles.ring}></div>
-      <div className={styles.ring}></div>
-      <div className={styles.core}></div>
+    <div className={styles.container}>
+      <div className={`${styles.ring} ${styles.ring1}`}></div>
+      <div className={`${styles.ring} ${styles.ring2}`}></div>
+      <div className={`${styles.orb} ${active ? styles.active : ''} ${speaking ? styles.speaking : ''}`}></div>
     </div>
   );
 }

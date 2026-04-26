@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  position: relative;
+}
+
+.orb {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 30px var(--accent);
+}
+
+.orb.active {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.orb.speaking {
+  animation: speak 0.5s infinite ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 0 0 50px var(--accent);
+}
+
+.ring {
+  position: absolute;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: rotate 10s linear infinite;
+}
+
+.ring1 { width: 140px; height: 140px; border-style: dashed; }
+.ring2 { width: 180px; height: 180px; border-width: 1px; animation-direction: reverse; }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes speak {
+  0%, 100% { transform: scale(1.1); }
+  50% { transform: scale(1.25); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

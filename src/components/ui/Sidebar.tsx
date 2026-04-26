@@ -10,7 +10,9 @@ export default function Sidebar() {
     <aside className={styles.sidebar}>
       <div className={styles.logo}>
         <div className={styles.orbMini}></div>
-        <span className={styles.logoText}>NEXUS<span className={styles.accent}>.AI</span></span>
+        <span className={styles.logoText}>
+          NEXUS<span className={styles.accent}>.AI</span>
+        </span>
       </div>
       
       <nav className={styles.nav}>
@@ -20,11 +22,13 @@ export default function Sidebar() {
       </nav>
 
       <div className={styles.footer}>
-        <div className={styles.status}
+        <div className={styles.status}>
           <span className={styles.statusDot}></span>
           <span className={styles.statusText}>System Online</span>
         </div>
-        <div className={styles.modeIndicator}>Mode: {mode.toUpperCase()}</div>
+        <div className={styles.modeIndicator}>
+          Mode: {mode ? mode.toUpperCase() : 'CHAT'}
+        </div>
       </div>
     </aside>
   );
