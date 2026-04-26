@@ -1,74 +1,46 @@
 "use client"
-import { useChatStore } from '@/store/chatStore';
+import { useState } from 'react';
+import { useChatStore } from '@/store/chatStore'; // Matches renamed file src/store/chatStore.ts
 import { useModeStore } from '@/store/modeStore';
-import { Message } from '@/types/chat.types';
+import { nanoid } from '@/lib/utils';
 
 export function useChat() {
-  const { messages, addMessage, appendToLast, setStreaming, isStreaming } = useChatStore();
+  const { messages, addMessage, setStreaming, isStreaming } = useChatStore();
   const { mode } = useModeStore();
+  const [error, setError] = useState<string | null>(null);
 
-  const send = async (text: string) => {
-    if (!text.trim() || isStreaming) return;
+  const send = async (content: string) => {
+    if (!content.trim()) return;
 
-    // 1. Add User Message
-    const userMsg: Message = {
-      id: Date.now().toString(),
-      role: 'user',
-      content: text,
-      mode,
-      timestamp: Date.now(),
-    };
-    addMessage(userMsg);
-
-    // 2. Add Empty Assistant Message for Streaming
-    const assistantId = (Date.now() + 1).toString();
-    addMessage({
-      id: assistantId,
-      role: 'assistant',
-      content: '',
-      mode,
-      timestamp: Date.now(),
-    });
-
+    setError(null);
+    const userMsg = { id: nanoid(), role: 'user', content, timestamp: Date.now() };
+    addMessage(userMsg as any);
     setStreaming(true);
 
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: text,
-          mode,
-          history: messages.slice(-10).map(m => ({ role: m.role, content: m.content })),
-        }),
+        body: JSON.stringify({ message: content, history: messages, mode }),
       });
 
-      if (!response.ok) throw new Error('Failed to fetch');
+      if (!response.ok) throw new Error('NEXUS Core connection failed.');
 
-      const reader = response.body?.getReader();
-      const decoder = new TextDecoder();
-
-      if (!reader) return;
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        const chunk = decoder.decode(value);
-        appendToLast(chunk);
-      }
-    } catch (error) {
-      appendToLast("Error: Could not connect to the AI core.");
+      const data = await response.json();
+      const assistantMsg = { 
+        id: nanoid(), 
+        role: 'assistant', 
+        content: data.content, 
+        timestamp: Date.now(),
+        imageUrl: data.imageUrl 
+      };
+      addMessage(assistantMsg as any);
+    } catch (err: any) {
+      setError(err.message);
     } finally {
       setStreaming(false);
     }
   };
 
-  return { send, isStreaming, messages };
-}
-// Inside useChat.ts
-const { speak } = useVoice();
-
-// Inside the send function, after the stream completes:
-if (mode === 'jarvis') {
-  speak(fullContent); // assistant content
+  return { send, error, isStreaming };
 }

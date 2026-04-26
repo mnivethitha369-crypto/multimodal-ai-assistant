@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { useChat } from '@/hooks/usechat';
+import { useChat } from '@/hooks/useChat';
 import styles from './InputBar.module.css';
 
 export default function InputBar() {

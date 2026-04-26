@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
-import { MODE_META } from '@/types/mode.types';
-import { useModeStore } from '@/store/modeStore';
+import { MODE_META } from '@/types/mode.types'; // Fixed: lowercase 'm'
+import { useModeStore } from '@/store/modeStore'; // Fixed: lowercase 'm'
 import styles from './ModeSelector.module.css';
 
 export default function ModeSelector() {

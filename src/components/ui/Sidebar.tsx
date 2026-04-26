@@ -1,34 +1,24 @@
 "use client"
 import React from 'react';
+import { useModeStore } from '@/store/modeStore'; // Fixed: lowercase 'm'
+import { MODE_META } from '@/types/mode.types';   // Fixed: lowercase 'm'
 import styles from './Sidebar.module.css';
-import { useModeStore } from '@/store/modeStore';
 
 export default function Sidebar() {
   const { mode } = useModeStore();
-
+  
   return (
     <aside className={styles.sidebar}>
-      <div className={styles.logo}>
-        <div className={styles.orbMini}></div>
-        <span className={styles.logoText}>
-          NEXUS<span className={styles.accent}>.AI</span>
-        </span>
-      </div>
-      
+      <div className={styles.logo}>NEXUS AI</div>
       <nav className={styles.nav}>
-        <div className={styles.navItem}>🧠 Memory</div>
-        <div className={styles.navItem}>🕓 History</div>
-        <div className={styles.navItem}>⚙️ Settings</div>
+        {/* Navigation links go here */}
       </nav>
-
-      <div className={styles.footer}>
-        <div className={styles.status}>
-          <span className={styles.statusDot}></span>
-          <span className={styles.statusText}>System Online</span>
-        </div>
-        <div className={styles.modeIndicator}>
-          Mode: {mode ? mode.toUpperCase() : 'CHAT'}
-        </div>
+      <div className={styles.activeMode}>
+        <div 
+          className={styles.indicator} 
+          style={{ backgroundColor: MODE_META[mode].color }}
+        />
+        <span>{MODE_META[mode].label} Mode</span>
       </div>
     </aside>
   );

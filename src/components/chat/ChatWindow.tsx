@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useRef } from 'react';
-import { useChatStore } from '@/store/Chatstore';
+import { useChatStore } from '@/store/chatStore';
 import JARVISOrb from '@/components/voice/JARVISOrb';
 import styles from './ChatWindow.module.css';
 
