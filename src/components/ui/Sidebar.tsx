@@ -20,7 +20,7 @@ export default function Sidebar() {
       </nav>
 
       <div className={styles.footer}>
-        <div className={styles.status}>
+        <div className={styles.status}
           <span className={styles.statusDot}></span>
           <span className={styles.statusText}>System Online</span>
         </div>

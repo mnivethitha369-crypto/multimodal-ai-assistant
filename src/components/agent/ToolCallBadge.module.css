@@ -1,0 +1,17 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text);
+  margin: 4px 0;
+}
+
+.running { border-color: var(--accent); color: var(--accent); }
+.success { border-color: var(--accent3); color: var(--accent3); }
+.error { border-color: var(--danger); color: var(--danger); }
