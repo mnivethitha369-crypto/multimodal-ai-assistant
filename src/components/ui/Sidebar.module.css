@@ -4,8 +4,8 @@
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  padding: 20px;
   height: 100vh;
+  padding: 20px;
 }
 
 .logo {
@@ -15,83 +15,8 @@
   margin-bottom: 40px;
 }
 
-.orbMini {
-  width: 12px;
-  height: 12px;
-  background: var(--accent);
-  border-radius: 50%;
-  box-shadow: var(--glow);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
-}
-
-.logoText {
-  font-family: var(--mono);
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.accent {
-  color: var(--accent);
-}
-
-.nav {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.navItem {
-  padding: 12px;
-  border-radius: var(--radius);
-  color: var(--text-dim);
-  cursor: pointer;
-  transition: 0.2s;
-  font-size: 14px;
-}
-
-.navItem:hover {
-  background: var(--bg3);
-  color: var(--text);
-}
-
-.footer {
-  margin-top: auto;
-  border-top: 1px solid var(--border);
-  padding-top: 20px;
-}
-
-.status {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-
-.statusDot {
-  width: 6px;
-  height: 6px;
-  background: var(--accent3);
-  border-radius: 50%;
-}
-
-.statusText {
-  font-size: 10px;
-  font-family: var(--mono);
-  color: var(--text-dim);
-  text-transform: uppercase;
-}
-
-.modeIndicator {
-  font-size: 10px;
-  font-family: var(--mono);
-  color: var(--accent);
-  text-transform: uppercase;
-}
+.logoText { font-family: var(--mono); font-size: 18px; font-weight: bold; }
+.accent { color: var(--accent); }
+.nav { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.navItem { padding: 12px; cursor: pointer; color: var(--text-dim); border-radius: 4px; }
+.navItem:hover { background: var(--bg3); color: var(--text); }
