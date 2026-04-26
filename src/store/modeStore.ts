@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { AppMode } from '@/types/chat.types';
+import { AppMode } from '@/types/mode.types'; // Fixed: Changed from chat.types
 
 interface ModeState {
   mode: AppMode;

@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import { useChatStore } from '@/store/chatStore'; // Matches renamed file src/store/chatStore.ts
+import { useChatStore } from '@/store/chatStore';
 import { useModeStore } from '@/store/modeStore';
 import { nanoid } from '@/lib/utils';
 
@@ -24,15 +24,17 @@ export function useChat() {
         body: JSON.stringify({ message: content, history: messages, mode }),
       });
 
-      if (!response.ok) throw new Error('NEXUS Core connection failed.');
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.content || 'NEXUS Core connection failed.');
+      }
 
       const data = await response.json();
       const assistantMsg = { 
         id: nanoid(), 
         role: 'assistant', 
         content: data.content, 
-        timestamp: Date.now(),
-        imageUrl: data.imageUrl 
+        timestamp: Date.now()
       };
       addMessage(assistantMsg as any);
     } catch (err: any) {
