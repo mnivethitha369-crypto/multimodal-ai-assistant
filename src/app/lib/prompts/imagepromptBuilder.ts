@@ -1,9 +1,5 @@
 export function buildImagePrompt(userInput: string): string {
-  return `
-Convert the following idea into a detailed AI image generation prompt.
-Include: subject, style, lighting, camera angle, background, mood, detail level.
-Respond ONLY with: "Image Prompt: [prompt]"
-
-User idea: "${userInput}"
-  `.trim();
+  return `Convert this idea into a detailed image prompt: "${userInput}". 
+  Focus on: subject, 2D animation style, flat colors, clean line art, lighting, and a vibrant mood suitable for YouTube storytelling. 
+  Output format: "Image Prompt: [optimized prompt]"`;
 }

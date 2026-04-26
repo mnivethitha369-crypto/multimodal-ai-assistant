@@ -1,0 +1,19 @@
+.uploader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: var(--bg3);
+  border: 1px dashed var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.uploader:hover {
+  border-color: var(--accent);
+  background: var(--bg2);
+}
+
+.icon { font-size: 14px; }
+.text { font-size: 12px; color: var(--text-dim); }

@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.intentBox p {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.resultBox {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.content {
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
